@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Program Transformasi PRAGIA - Sembilan modul peningkatan mutu sekolah berkelanjutan.">
+<meta name="theme-color" content="#075c3b">
+<title>Program Transformasi | PRAGIA</title>
+
+<style>
+:root {
+  --green:#075c3b;
+  --deep:#063d2b;
+  --green2:#08754b;
+  --gold:#d9a441;
+  --light:#f4f8f5;
+  --dark:#173328;
+  --muted:#687970;
+  --white:#fff;
+}
+* {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
+body {
+  font-family:Arial,sans-serif;
+  color:var(--dark);
+  line-height:1.7;
+}
+.container {
+  width:86%;
+  max-width:1150px;
+  margin:auto;
+}
+header {
+  background:white;
+  box-shadow:0 2px 12px #00000012;
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.header-inner {
+  min-height:100px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+.brand img {width:190px;display:block}
+nav {display:flex;gap:25px}
+nav a {
+  text-decoration:none;
+  color:var(--dark);
+  font-size:14px;
+  font-weight:bold;
+}
+nav a:hover {color:var(--green2)}
+.menu-toggle {
+  display:none;
+  border:0;
+  background:var(--green);
+  color:white;
+  padding:9px 13px;
+  border-radius:5px;
+  font-size:20px;
+}
+.hero {
+  background:linear-gradient(120deg,var(--deep),var(--green2));
+  color:white;
+  padding:90px 0;
+}
+.eyebrow {
+  color:var(--gold);
+  font-weight:bold;
+  font-size:13px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.hero h1 {
+  font-size:clamp(36px,5vw,54px);
+  line-height:1.2;
+  margin:15px 0;
+}
+.hero p {
+  max-width:750px;
+  color:#e0eee5;
+}
+section {padding:75px 0}
+.section-heading {
+  text-align:center;
+  max-width:780px;
+  margin:0 auto 45px;
+}
+.section-heading h2 {
+  color:var(--green);
+  font-size:34px;
+  line-height:1.3;
+  margin:8px 0 12px;
+}
+.section-heading p {color:var(--muted)}
+.intro {
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  color:var(--muted);
+}
+.pillars {
+  background:var(--light);
+}
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.card {
+  background:white;
+  padding:28px;
+  border-radius:10px;
+  border:1px solid #e2eae3;
+  box-shadow:0 5px 20px #00000008;
+}
+.number {
+  color:var(--gold);
+  font-size:30px;
+  font-weight:bold;
+}
+.card h3 {
+  color:var(--green);
+  font-size:22px;
+  margin:5px 0;
+}
+.card p {
+  color:var(--muted);
+  font-size:14px;
+}
+.card-label {
+  display:inline-block;
+  margin-top:17px;
+  color:var(--green);
+  background:#eaf4ed;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:bold;
+}
+.modules {background:white}
+.module-group {margin-bottom:50px}
+.group-title {
+  background:var(--green);
+  color:white;
+  padding:20px 25px;
+  border-radius:8px 8px 0 0;
+}
+.group-title span {
+  color:var(--gold);
+  font-size:13px;
+  font-weight:bold;
+}
+.group-title h3 {font-size:22px}
+.module-list {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  padding:20px;
+  background:var(--light);
+  border-radius:0 0 8px 8px;
+}
+.module {
+  background:white;
+  padding:24px;
+  border:1px solid #e2eae3;
+  border-radius:8px;
+  display:flex;
+  flex-direction:column;
+}
+.module-code {
+  color:var(--gold);
+  font-size:13px;
+  font-weight:bold;
+}
+.module h4 {
+  color:var(--green);
+  font-size:17px;
+  line-height:1.4;
+  margin:8px 0 12px;
+}
+.module p {
+  font-size:13px;
+  color:var(--muted);
+}
+.module strong {color:var(--dark)}
+.module details {
+  margin-top:17px;
+  border-top:1px solid #e5ebe6;
+  padding-top:12px;
+}
+.module summary {
+  color:var(--green);
+  cursor:pointer;
+  font-size:13px;
+  font-weight:bold;
+}
+.module details p {margin-top:10px}
+.module details ul {
+  margin:8px 0 0 18px;
+  color:var(--muted);
+  font-size:13px;
+}
+.roadmap {
+  background:var(--light);
+}
+.timeline {
+  max-width:850px;
+  margin:auto;
+}
+.phase {
+  display:grid;
+  grid-template-columns:130px 1fr;
+  gap:20px;
+  background:white;
+  border:1px solid #e5ebe6;
+  border-radius:8px;
+  padding:23px;
+  margin-bottom:15px;
+}
+.phase-time {
+  color:var(--green);
+  font-weight:bold;
+}
+.phase h3 {
+  color:var(--green);
+  font-size:17px;
+}
+.phase p {
+  color:var(--muted);
+  font-size:14px;
+}
+.evidence-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.evidence {
+  padding:25px;
+  background:var(--light);
+  border-radius:8px;
+}
+.evidence h3 {
+  color:var(--green);
+  margin-bottom:10px;
+}
+.evidence p {
+  color:var(--muted);
+  font-size:14px;
+}
+.cta {
+  background:linear-gradient(120deg,var(--deep),var(--green2));
+  color:white;
+  text-align:center;
+}
+.cta h2 {
+  font-size:32px;
+  margin-bottom:12px;
+}
+.cta p {
+  max-width:700px;
+  margin:0 auto 25px;
+  color:#e0eee5;
+}
+.btn {
+  display:inline-block;
+  background:var(--gold);
+  color:var(--dark);
+  padding:13px 26px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:bold;
+}
+footer {
+  background:#092c20;
+  color:white;
+  padding:35px 0;
+  text-align:center;
+  font-size:13px;
+}
+footer p {color:#c9d9d0}
+@media(max-width:900px) {
+  .cards,.module-list,.evidence-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+@media(max-width:700px) {
+  .container {width:90%}
+  .header-inner {
+    min-height:85px;
+    flex-wrap:wrap;
+    padding:10px 0;
+  }
+  .brand img {width:155px}
+  .menu-toggle {display:block}
+  nav {
+    display:none;
+    width:100%;
+    flex-direction:column;
+    gap:0;
+    padding-bottom:12px;
+  }
+  nav.active {display:flex}
+  nav a {
+    padding:10px 0;
+    border-top:1px solid #eee;
+  }
+  .cards,.module-list,.evidence-grid {
+    grid-template-columns:1fr;
+  }
+  .hero {padding:65px 0}
+  section {padding:55px 0}
+  .phase {grid-template-columns:1fr;gap:5px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="https://raw.githubusercontent.com/Pragia-lab/pragia-website/main/logo-pragia.png.png"
+      alt="Logo PRAGIA">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="mainNav">
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="index.html#visi">Visi Misi</a>
+      <a href="program.html">Program</a>
+      <a href="index.html#academy">Academy</a>
+      <a href="index.html#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Program Unggulan PRAGIA</p>
+    <h1>Program Transformasi<br>Peningkatan Mutu Sekolah</h1>
+    <p>
+      Program pendampingan pendidikan berkelanjutan
+      untuk membangun budaya mutu, meningkatkan kualitas
+      pembelajaran, dan memperkuat tata kelola sekolah.
+    </p>
+  </div>
+</section>
+
+<!-- PENGANTAR -->
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Pendekatan Transformasi</p>
+      <h2>Dari Compliance Menuju Performance</h2>
+    </div>
+    <div class="intro">
+      <p>
+        PRAGIA mendampingi satuan pendidikan bergerak
+        melampaui pemenuhan kewajiban administratif menuju
+        pencapaian kinerja nyata yang terukur.
+        Transformasi dilaksanakan melalui perubahan praktik
+        pendidik, penguatan manajemen kurikulum dan data,
+        serta kepemimpinan sistemik dan iklim sekolah.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TIGA PILAR -->
+<section class="pillars" id="pilar">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Kerangka Program</p>
+      <h2>Tiga Pilar Transformasi</h2>
+      <p>Tiga kluster strategis yang saling terintegrasi.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="number">01</div>
+        <h3>TPP</h3>
+        <strong>Transformasi Praktik Pendidik</strong>
+        <p>
+          Perubahan perilaku dan budaya mengajar,
+          profesionalisme reflektif, dukungan emosional,
+          serta interaksi yang menghargai murid.
+        </p>
+        <span class="card-label">3 MODUL</span>
+      </article>
+
+      <article class="card">
+        <div class="number">02</div>
+        <h3>MKD</h3>
+        <strong>Manajemen Kurikulum dan Data</strong>
+        <p>
+          Pengembangan kurikulum adaptif dan terukur
+          berdasarkan data diagnostik, kebutuhan murid,
+          serta relevansi dunia kerja.
+        </p>
+        <span class="card-label">3 MODUL</span>
+      </article>
+
+      <article class="card">
+        <div class="number">03</div>
+        <h3>KSI</h3>
+        <strong>Kepemimpinan Sistemik dan Iklim</strong>
+        <p>
+          Penguatan tata kelola, akuntabilitas,
+          fasilitas, keamanan, inklusivitas,
+          dan kesejahteraan warga sekolah.
+        </p>
+        <span class="card-label">3 MODUL</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SEMBILAN MODUL -->
+<section class="modules" id="modul">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Struktur Intervensi</p>
+      <h2>Sembilan Modul Transformasi PRAGIA</h2>
+      <p>
+        Setiap modul diarahkan pada perubahan praktik
+        dan menghasilkan bukti kinerja autentik.
+        Buka detail untuk melihat fokus kegiatan dan hasilnya.
+      </p>
+    </div>
+
+    <!-- TPP -->
+    <div class="module-group">
+      <div class="group-title">
+        <span>KLUSTER 01</span>
+        <h3>Transformasi Praktik Pendidik (TPP)</h3>
+      </div>
+
+      <div class="module-list">
+
+        <article class="module">
+          <span class="module-code">TPP.1</span>
+          <h4>Penguatan Relasi & Dukungan Emosional</h4>
+          <p>
+            Dukungan sosial emosional, komunikasi empati,
+            interaksi setara, dan identifikasi hambatan
+            belajar murid.
+          </p>
+          <details>
+            <summary>Lihat fokus modul</summary>
+            <p><strong>Tujuan:</strong> Menguatkan relasi pendidik dan murid yang manusiawi serta mendukung proses belajar.</p>
+            <p><strong>Materi inti:</strong></p>
+            <ul>
+              <li>Dukungan sosial emosional.</li>
+              <li>Komunikasi empati.</li>
+              <li>Interaksi yang setara.</li>
+              <li>Identifikasi hambatan belajar murid.</li>
+            </ul>
+            <p><strong>Aktivitas:</strong> Praktik komunikasi empatik dan identifikasi kebutuhan murid.</p>
+            <p><strong>Bukti kinerja:</strong> Dokumentasi praktik interaksi kelas dan catatan identifikasi hambatan belajar.</p>
+          </details>
+        </article>
+
+        <article class="module">
+          <span class="module-code">TPP.2</span>
+          <h4>Habituasi Refleksi & Pengembangan Diri</h4>
+          <p>
+            Siklus refleksi mingguan guru, penyusunan
+            Rencana Pengembangan Diri (RPD),
+            dan penguatan Komunitas Belajar.
+          </p>
+          <details>
+            <summary>Lihat fokus modul</summary>
+            <p><strong>Tujuan:</strong> Membangun kebiasaan refleksi dan pengembangan profesional pendidik.</p>
+            <p><strong>Materi inti:</strong></p>
+            <ul>
+              <li>Refleksi mingguan guru.</li>
+              <li>Rencana Pengembangan Diri (RPD).</li>
+              <li>Komunitas Belajar (Kombel).</li>
+            </ul>
+            <p><strong>Aktivitas:</strong> Refleksi praktik pembelajaran, penyusunan RPD, dan kegiatan komunitas belajar.</p>
+            <p><strong>Bukti kinerja:</strong> Jurnal refleksi, dokumen RPD, dan dokumentasi kegiatan Kombel.</p>
+          </details>
+        </article>
+
+        <article class="module">
+          <span class="module-code">TPP.3</span>
+          <h4>Ekosistem Kelas & Integrasi Karakter</h4>
+          <p>
+            Kesepakatan kelas partisipatif,
+            disiplin positif, dan integrasi nilai
+            Profil Pelajar Pancasila.
+          </p>
+          <details>
+            <summary>Lihat fokus modul</summary>
+            <p><strong>Tujuan:</strong> Membangun lingkungan kelas yang positif dan mendukung pembentukan karakter.</p>
+            <p><strong>Materi inti:</strong></p>
+            <ul>
+              <li>Kesepakatan kelas partisipatif.</li>
+              <li>Disiplin positif.</li>
+              <li>Integrasi nilai Profil Pelajar Pancasila.</li>
+            </ul>
+            <p><strong>Aktivitas:</strong> Penyusunan kesepakatan kelas bersama murid dan penerapan disiplin positif.</p>
+            <p><strong>Bukti kinerja:</strong> Dokumen kesepakatan kelas dan dokumentasi praktik pembelajaran.</p>
+          </details>
+        </article>
+      </div>
+    </div>
+
+    <!-- MKD -->
+    <div class="module-group">
+      <div class="group-title">
+        <span>KLUSTER 02</span>
+        <h3>Manajemen Kurikulum dan Data (MKD)</h3>
+      </div>
+
+      <div class="module-list">
+
+        <article class="module">
+          <span class="module-code">MKD.1</span>
+          <h4>Rancangan Instruksional Berbasis Data</h4>
+          <p>
+            Asesmen diagnostik kognitif dan non-kognitif
+            serta strategi pembelajaran berdiferensiasi.
+          </p>
+          <details>
+            <summary>Lihat fokus modul</summary>
+            <p><strong>Tujuan:</strong> Mengembangkan rancangan pembelajaran berdasarkan kondisi dan kebutuhan murid.</p>
+            <p><strong>Materi inti:</strong></p>
+            <ul>
+              <li>Asesmen diagnostik kognitif.</li>
+              <li>Asesmen diagnostik non-kognitif.</li>
+              <li>Pembelajaran berdiferensiasi.</li>
+            </ul>
+            <p><strong>Aktivitas:</strong> Perancangan instrumen diagnostik dan penyusunan strategi pembelajaran.</p>
+            <p><strong>Bukti kinerja:</strong> Instrumen asesmen, hasil analisis, dan rancangan pembelajaran.</p>
+          </details>
+        </article>
+
+        <article class="module">
+          <span class="module-code">MKD.2</span>
+          <h4>Desain Kurikulum Adaptif & KOSP</h4>
+          <p>
+            Analisis karakteristik satuan pendidikan,
+            penyelarasan kurikulum nasional,
+            dan evaluasi berkala KOSP.
+          </p>
+          <details>
+            <summary>Lihat fokus modul</summary>
+            <p><strong>Tujuan:</strong> Menghasilkan kurikulum yang sesuai dengan karakteristik dan kebutuhan satuan pendidikan.</p>
+            <p><strong>Materi inti:</strong></p>
+            <ul>
+              <li>Analisis karakteristik sekolah.</li>
+              <li>Penyelarasan kurikulum nasional.</li>
+              <li>Evaluasi dan penyusunan KOSP.</li>
+            </ul>
+            <p><strong>Aktivitas:</strong> Analisis kondisi sekolah dan evaluasi dokumen KOSP.</p>
+            <p><strong>Bukti kinerja:</strong> Dokumen analisis karakteristik dan dokumen KOSP.</p>
+          </details>
+        </article>
+
+        <article class="module">
+          <span class="module-code">MKD.3</span>
+          <h4>Sinergi Vokasi & Portofolio Lulusan</h4>
+          <p>
+            Khusus SMK: sinkronisasi industri,
+            guru tamu, budaya kerja/K3,
+            dan portofolio digital karya lulusan.
+          </p>
+          <details>
+            <summary>Lihat fokus modul</summary>
+            <p><strong>Tujuan:</strong> Memperkuat relevansi pendidikan vokasi dengan kebutuhan dunia kerja.</p>
+            <p><strong>Materi inti:</strong></p>
+            <ul>
+              <li>Sinkronisasi dengan industri.</li>
+              <li>Program guru tamu.</li>
+              <li>Budaya kerja dan K3.</li>
+              <li>Portofolio digital karya lulusan.</li>
+            </ul>
+            <p><strong>Aktivitas:</strong> Penguatan sinergi industri dan pengembangan portofolio karya murid.</p>
+            <p><strong>Bukti kinerja:</strong> Dokumen sinkronisasi, dokumentasi guru tamu, dan portofolio digital.</p>
+          </details>
+        </article>
+      </div>
+    </div>
+
+    <!-- KSI -->
+    <div class="module-group">
+      <div class="group-title">
+        <span>KLUSTER 03</span>
+        <h3>Kepemimpinan Sistemik dan Iklim (KSI)</h3>
+      </div>
+
+      <div class="module-list">
+
+        <article class="module">
+          <span class="module-code">KSI.1</span>
+          <h4>Tata Kelola Partisipatif & Akuntabilitas Fiskal</h4>
+          <p>
+            Penyusunan RKAS berbasis data Rapor Pendidikan
+            serta sinergi dengan orang tua dan mitra eksternal.
+          </p>
+          <details>
+            <summary>Lihat fokus modul</summary>
+            <p><strong>Tujuan:</strong> Memperkuat tata kelola sekolah yang partisipatif dan akuntabel.</p>
+            <p><strong>Materi inti:</strong></p>
+            <ul>
+              <li>RKAS berbasis Rapor Pendidikan.</li>
+              <li>Partisipasi orang tua.</li>
+              <li>Sinergi mitra eksternal.</li>
+            </ul>
+            <p><strong>Aktivitas:</strong> Analisis prioritas mutu dan penguatan perencanaan anggaran bersama pemangku kepentingan.</p>
+            <p><strong>Bukti kinerja:</strong> Dokumen perencanaan anggaran dan dokumentasi kemitraan.</p>
+          </details>
+        </article>
+
+        <article class="module">
+          <span class="module-code">KSI.2</span>
+          <h4>Manajemen Aset & Ekosistem Inklusif</h4>
+          <p>
+            Pendataan fungsional sarana prasarana,
+            promosi kebinekaan, dan layanan
+            bagi murid berkebutuhan khusus.
+          </p>
+          <details>
+            <summary>Lihat fokus modul</summary>
+            <p><strong>Tujuan:</strong> Membangun pengelolaan fasilitas dan ekosistem sekolah yang inklusif.</p>
+            <p><strong>Materi inti:</strong></p>
+            <ul>
+              <li>Pendataan fungsional sarana prasarana.</li>
+              <li>Promosi nilai kebinekaan.</li>
+              <li>Standar layanan murid berkebutuhan khusus.</li>
+            </ul>
+            <p><strong>Aktivitas:</strong> Pendataan aset dan evaluasi layanan inklusif.</p>
+            <p><strong>Bukti kinerja:</strong> Data inventaris fungsional dan dokumen standar layanan.</p>
+          </details>
+        </article>
+
+        <article class="module">
+          <span class="module-code">KSI.3</span>
+          <h4>Keamanan Ekosistem & Kesejahteraan Warga</h4>
+          <p>
+            Aktivasi TPPK, mitigasi risiko bencana,
+            kesehatan mental, dan lingkungan sekolah sehat.
+          </p>
+          <details>
+            <summary>Lihat fokus modul</summary>
+            <p><strong>Tujuan:</strong> Memastikan lingkungan sekolah aman dan mendukung kesejahteraan seluruh warga.</p>
+            <p><strong>Materi inti:</strong></p>
+            <ul>
+              <li>Tim Pencegahan dan Penanganan Kekerasan (TPPK).</li>
+              <li>Mitigasi risiko bencana.</li>
+              <li>Kesehatan mental.</li>
+              <li>Lingkungan sekolah sehat.</li>
+            </ul>
+            <p><strong>Aktivitas:</strong> Penguatan protokol keamanan, mitigasi risiko, dan kebijakan lingkungan sehat.</p>
+            <p><strong>Bukti kinerja:</strong> Dokumen kebijakan, SOP, dan dokumentasi pelaksanaan.</p>
+          </details>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="roadmap" id="roadmap">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Pelaksanaan Program</p>
+      <h2>Roadmap Transformasi 12 Bulan</h2>
+      <p>Lima fase pendampingan peningkatan mutu sekolah.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="phase">
+        <div class="phase-time">Bulan 1–2</div>
+        <div>
+          <h3>Fase 1 — Alignment & Diagnosa</h3>
+          <p>Audit Rapor Pendidikan, Dapodik, dan dokumen akreditasi.</p>
+          <p><strong>Output:</strong> Profil Risiko dan Peluang Mutu Sekolah.</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-time">Bulan 3–5</div>
+        <div>
+          <h3>Fase 2 — Transformasi Praktik Pendidik</h3>
+          <p>Penguatan empati dan pendampingan habituasi refleksi guru.</p>
+          <p><strong>Output:</strong> Budaya refleksi mingguan dan bukti interaksi kelas autentik.</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-time">Bulan 6–8</div>
+        <div>
+          <h3>Fase 3 — Manajemen Kurikulum dan Data</h3>
+          <p>Desain kurikulum adaptif berbasis data diagnostik.</p>
+          <p><strong>Output:</strong> Modul ajar kontekstual dan sistem portofolio lulusan.</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-time">Bulan 9–10</div>
+        <div>
+          <h3>Fase 4 — Kepemimpinan Sistemik dan Iklim</h3>
+          <p>Penguatan manajemen aset, akuntabilitas anggaran, dan keamanan sekolah.</p>
+          <p><strong>Output:</strong> SOP operasional dan ekosistem sekolah aman serta inklusif.</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-time">Bulan 11–12</div>
+        <div>
+          <h3>Fase 5 — Validation & Sustainability</h3>
+          <p>Verifikasi bukti capaian dan transfer keahlian kepada tim internal.</p>
+          <p><strong>Output:</strong> Portofolio Transformasi dan Kemandirian Mutu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUKTI KINERJA -->
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Standar Mutu</p>
+      <h2>Transformasi Berbasis Bukti Autentik</h2>
+      <p>Perubahan harus dapat diamati, didokumentasikan, dan dievaluasi.</p>
+    </div>
+
+    <div class="evidence-grid">
+      <div class="evidence">
+        <h3>16 Aspek Capaian Kinerja</h3>
+        <p>Indikator utama pendampingan yang diselaraskan dengan Rapor Pendidikan dan Standar Akreditasi.</p>
+      </div>
+      <div class="evidence">
+        <h3>Bukti Kinerja Autentik</h3>
+        <p>Video, jurnal refleksi, dokumen kebijakan, SOP, dan laporan data.</p>
+      </div>
+      <div class="evidence">
+        <h3>Evaluasi Dampak</h3>
+        <p>Pengukuran perubahan perilaku guru dan perbaikan iklim sekolah.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section class="cta">
+  <div class="container">
+    <p class="eyebrow">Kemitraan Transformasi</p>
+    <h2>Mari Bertumbuh Bersama PRAGIA</h2>
+    <p>
+      Mari membangun ekosistem pendidikan yang bermutu,
+      manusiawi, dan berkelanjutan.
+    </p>
+    <a href="index.html#kontak" class="btn">Hubungi PRAGIA</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <strong>PRAGIA</strong>
+    <p>Pusat Transformasi Pendidikan Indonesia</p>
+    <p>Founder: Bambang Afianto</p>
+    <p>&copy; 2026 PRAGIA. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+menuToggle.addEventListener("click", function() {
+  const opened = mainNav.classList.toggle("active");
+  menuToggle.textContent = opened ? "✕" : "☰";
+  menuToggle.setAttribute("aria-expanded", opened);
+});
+
+document.querySelectorAll("#mainNav a").forEach(function(link) {
+  link.addEventListener("click", function() {
+    mainNav.classList.remove("active");
+    menuToggle.textContent = "☰";
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
+</script>
+
+</body>
+</html>
