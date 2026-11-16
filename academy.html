@@ -453,6 +453,109 @@ footer strong {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.12);
 }
+  /* FORM PENDAFTARAN PRAGIA */
+.pragia-register {
+    padding: 75px 8%;
+    background: #f3f7f4;
+}
+
+.pragia-register-container {
+    max-width: 850px;
+    margin: auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #dce9df;
+    box-shadow: 0 8px 25px rgba(0,0,0,.05);
+}
+
+.pragia-register-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.pragia-register-heading h2 {
+    color: #075c3b;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.pragia-register-heading p {
+    color: #718078;
+    line-height: 1.7;
+}
+
+.pragia-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.pragia-form-group {
+    margin-bottom: 18px;
+}
+
+.pragia-form-group.full {
+    grid-column: 1 / -1;
+}
+
+.pragia-form-group label {
+    display: block;
+    color: #173328;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.pragia-form-group input,
+.pragia-form-group select,
+.pragia-form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dce5df;
+    border-radius: 9px;
+    font-size: 15px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.pragia-form-group input:focus,
+.pragia-form-group select:focus,
+.pragia-form-group textarea:focus {
+    outline: none;
+    border-color: #075c3b;
+}
+
+.pragia-submit {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background: #075c3b;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.pragia-submit:hover {
+    background: #d9a441;
+    color: #173328;
+}
+
+@media(max-width:700px) {
+    .pragia-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pragia-register-container {
+        padding: 25px 18px;
+    }
+
+    .pragia-register-heading h2 {
+        font-size: 24px;
+    }
+}
 </style>
 </head>
 
@@ -738,18 +841,13 @@ dan lingkungan sekolah sehat.</p>
   </p>
 
   <a class="btn"
-     href="mailto:bambangafianto66@gmail.com?subject=Informasi%20PRAGIA%20Academy">
+     href="mailto:pragia66@gmail.com?subject=Informasi%20PRAGIA%20Academy">
      Hubungi PRAGIA Academy
   </a>
 </section>
 
 </main>
 
-<footer>
-  <strong>PRAGIA ACADEMY</strong>
-  <p>Pusat Transformasi Pendidikan Indonesia</p>
-  <p>&copy; 2026 PRAGIA. All Rights Reserved.</p>
-</footer>
 
 <section class="academy-models" id="model-layanan">
 
@@ -823,6 +921,126 @@ dan lingkungan sekolah sehat.</p>
 
 </div>
 </section>
+
+<!-- FORMULIR PENDAFTARAN PRAGIA ACADEMY -->
+<section class="pragia-register" id="formulir">
+
+  <div class="pragia-register-container">
+
+    <div class="pragia-register-heading">
+      <h2>Formulir Konsultasi & Pendaftaran</h2>
+      <p>
+        Sampaikan kebutuhan pengembangan pendidikan
+        Anda. Tim PRAGIA akan menghubungi Anda.
+      </p>
+    </div>
+
+    <form id="pragiaForm">
+
+      <div class="pragia-form-grid">
+
+        <div class="pragia-form-group">
+          <label>Nama Lengkap *</label>
+          <input type="text" id="nama" required
+          placeholder="Masukkan nama lengkap">
+        </div>
+
+        <div class="pragia-form-group">
+          <label>Nama Sekolah/Lembaga *</label>
+          <input type="text" id="sekolah" required
+          placeholder="Nama sekolah atau lembaga">
+        </div>
+
+        <div class="pragia-form-group">
+          <label>Jabatan *</label>
+          <input type="text" id="jabatan" required
+          placeholder="Guru, Kepala Sekolah, dan lainnya">
+        </div>
+
+        <div class="pragia-form-group">
+          <label>Nomor WhatsApp *</label>
+          <input type="tel" id="whatsapp" required
+          placeholder="08xxxxxxxxxx">
+        </div>
+
+        <div class="pragia-form-group full">
+          <label>Model Layanan *</label>
+          <select id="model" required>
+            <option value="">Pilih model layanan</option>
+            <option>In-house Training</option>
+            <option>Public Training</option>
+          </select>
+        </div>
+
+        <div class="pragia-form-group full">
+          <label>Topik atau Kebutuhan Pelatihan *</label>
+          <select id="topik" required>
+            <option value="">Pilih kebutuhan</option>
+            <option>Transformasi Praktik Pendidik (TPP)</option>
+            <option>Manajemen Kurikulum dan Data (MKD)</option>
+            <option>Kepemimpinan Sistemik dan Iklim (KSI)</option>
+            <option>Konsultasi dan Pendampingan Sekolah</option>
+            <option>Kebutuhan lainnya</option>
+          </select>
+        </div>
+
+        <div class="pragia-form-group full">
+          <label>Keterangan Tambahan</label>
+          <textarea id="keterangan" rows="4"
+          placeholder="Ceritakan kebutuhan atau harapan Anda..."></textarea>
+        </div>
+
+      </div>
+
+      <button type="submit" class="pragia-submit">
+        Kirim Formulir melalui WhatsApp
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<script>
+document.getElementById("pragiaForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nama = document.getElementById("nama").value;
+    const sekolah = document.getElementById("sekolah").value;
+    const jabatan = document.getElementById("jabatan").value;
+    const whatsapp = document.getElementById("whatsapp").value;
+    const model = document.getElementById("model").value;
+    const topik = document.getElementById("topik").value;
+    const keterangan = document.getElementById("keterangan").value;
+
+    const pesan =
+`ASSALAMUALAIKUM PRAGIA
+
+FORMULIR KONSULTASI DAN PENDAFTARAN
+
+Nama: ${nama}
+Sekolah/Lembaga: ${sekolah}
+Jabatan: ${jabatan}
+WhatsApp: ${whatsapp}
+Model Layanan: ${model}
+Kebutuhan: ${topik}
+Keterangan: ${keterangan}
+
+Saya ingin mendapatkan informasi lebih lanjut dari PRAGIA Academy.
+
+Terima kasih.`;
+
+    const url = "https://wa.me/628119997464?text=" + encodeURIComponent(pesan);
+
+    window.open(url, "_blank");
+});
+</script>
+</body>
+</html>
+<footer>
+  <strong>PRAGIA ACADEMY</strong>
+  <p>Pusat Transformasi Pendidikan Indonesia</p>
+  <p>&copy; 2026 PRAGIA. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
