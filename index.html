@@ -6,90 +6,264 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="PRAGIA - Pusat Transformasi Pendidikan Indonesia. Membangun manusia, mentransformasi pendidikan.">
 <title>PRAGIA | Pusat Transformasi Pendidikan Indonesia</title>
+
 <style>
 :root {
-  --green: #075c3b;
-  --gold: #d9a441;
-  --light: #f5f8f5;
-  --dark: #173328;
+  --green:#075c3b;
+  --deep:#063d2b;
+  --gold:#d9a441;
+  --light:#f4f8f5;
+  --dark:#173328;
+  --white:#ffffff;
 }
-* {box-sizing:border-box;margin:0;padding:0}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  scroll-behavior:smooth;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family:Arial,sans-serif;
   color:var(--dark);
   line-height:1.7;
 }
+
 header {
   background:white;
-  padding:10px 7%;
+  padding:12px 7%;
   display:flex;
   justify-content:space-between;
   align-items:center;
   position:sticky;
   top:0;
+  z-index:100;
   box-shadow:0 2px 12px #00000012;
-  z-index:10;
-}
-.brand {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
 }
 
 .brand img {
-  width: 160px;
-  height: auto;
-  display: block;
-  object-fit: contain;
+  width:160px;
+  height:auto;
+  display:block;
 }
-  height: auto;
-  display: block;
-  object-fit: contain;
+
+nav {
+  display:flex;
+  gap:25px;
+  align-items:center;
 }
-nav {display:flex;gap:24px}
-nav a {text-decoration:none;color:var(--dark);font-size:14px}
+
+nav a {
+  text-decoration:none;
+  color:var(--dark);
+  font-size:14px;
+  font-weight:600;
+}
+
+nav a:hover {
+  color:var(--gold);
+}
+
 .hero {
   background:linear-gradient(120deg,#063d2b,#08754b);
   color:white;
-  padding:110px 8%;
-  min-height:480px;
+  padding:100px 8%;
+  min-height:490px;
   display:flex;
   align-items:center;
 }
-.hero-content {max-width:750px}
-.hero h1 {font-size:clamp(36px,5vw,58px);line-height:1.2;margin-bottom:22px}
-.hero p {font-size:18px;color:#e0eee5;margin-bottom:30px}
+
+.hero-content {
+  max-width:800px;
+}
+
+.eyebrow {
+  color:var(--gold);
+  font-weight:bold;
+  letter-spacing:2px;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.hero h1 {
+  font-size:clamp(38px,5vw,60px);
+  line-height:1.15;
+  margin-bottom:24px;
+}
+
+.hero p {
+  font-size:18px;
+  color:#e0eee5;
+  margin-bottom:30px;
+  max-width:750px;
+}
+
 .btn {
   display:inline-block;
   background:var(--gold);
   color:#173328;
-  padding:13px 27px;
+  padding:13px 28px;
   border-radius:5px;
   text-decoration:none;
   font-weight:bold;
+  transition:.3s;
 }
-section {padding:75px 8%}
-.section-title {text-align:center;margin-bottom:42px}
-.section-title h2 {color:var(--green);font-size:32px}
-.section-title p {color:#718078}
-.about {background:var(--light)}
-.about-content {max-width:850px;margin:auto;text-align:center}
+
+.btn:hover {
+  background:white;
+  transform:translateY(-2px);
+}
+
+section {
+  padding:80px 8%;
+}
+
+.section-title {
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2 {
+  color:var(--green);
+  font-size:32px;
+  margin-bottom:8px;
+}
+
+.section-title p {
+  color:#718078;
+}
+
+.about {
+  background:var(--light);
+}
+
+.about-content {
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  font-size:17px;
+}
+
+.vision-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+  margin-top:40px;
+}
+
+.vision-card {
+  padding:35px;
+  background:white;
+  border-left:4px solid var(--gold);
+  border-radius:8px;
+  box-shadow:0 5px 20px #00000008;
+}
+
+.vision-card h3 {
+  color:var(--green);
+  margin-bottom:15px;
+  font-size:23px;
+}
+
 .cards {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:24px;
 }
+
 .card {
-  padding:30px;
+  padding:32px;
   border:1px solid #e3eae4;
   border-radius:10px;
   background:white;
   box-shadow:0 5px 20px #00000008;
+  transition:.3s;
 }
-.card h3 {color:var(--green);margin-bottom:12px}
-.card .number {font-size:30px;color:var(--gold);font-weight:bold}
-.cta {background:var(--green);color:white;text-align:center}
-.cta h2 {font-size:32px;margin-bottom:15px}
+
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px #00000012;
+}
+
+.card h3 {
+  color:var(--green);
+  margin:12px 0;
+  font-size:21px;
+}
+
+.number {
+  font-size:32px;
+  color:var(--gold);
+  font-weight:bold;
+}
+
+.advantages {
+  background:var(--light);
+}
+
+.advantage-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.advantage {
+  padding:25px;
+  background:white;
+  border-radius:8px;
+}
+
+.advantage h3 {
+  color:var(--green);
+  margin-bottom:10px;
+}
+
+.academy-content {
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  font-size:17px;
+}
+
+.academy-content h3 {
+  color:var(--green);
+  font-size:25px;
+  margin-bottom:15px;
+}
+
+.academy-list {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-top:30px;
+}
+
+.academy-list span {
+  background:var(--light);
+  padding:12px 20px;
+  border-radius:30px;
+  color:var(--green);
+  font-weight:bold;
+  font-size:14px;
+}
+
+.cta {
+  background:linear-gradient(120deg,#063d2b,#08754b);
+  color:white;
+  text-align:center;
+}
+
+.cta h2 {
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.cta p {
+  margin-bottom:25px;
+}
+
 footer {
   background:#092c20;
   color:white;
@@ -97,29 +271,64 @@ footer {
   text-align:center;
   font-size:13px;
 }
-@media(max-width:700px) {
-  .brand img {
-    width: 190px;
-  }
+
+footer strong {
+  font-size:22px;
+  letter-spacing:2px;
 }
-  @media(max-width:700px) {
-  header {flex-direction:column;gap:12px}
-  nav {gap:12px;flex-wrap:wrap;justify-content:center}
-  .hero {padding:75px 7%}
-  .cards {grid-template-columns:1fr}
-  section {padding:55px 7%}
+
+@media(max-width:700px) {
+  header {
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .brand img {
+    width:140px;
+  }
+
+  nav {
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  nav a {
+    font-size:12px;
+  }
+
+  .hero {
+    padding:75px 7%;
+  }
+
+  .cards,
+  .vision-grid,
+  .advantage-grid {
+    grid-template-columns:1fr;
+  }
+
+  section {
+    padding:60px 7%;
+  }
+
+  .section-title h2 {
+    font-size:27px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <a href="#beranda" class="brand">
-  <img src="logo-pragia.png.png" alt="Logo PRAGIA">
-</a>
+  <div class="brand">
+    <img src="logo-pragia.png.png" alt="Logo PRAGIA">
+  </div>
+
   <nav>
     <a href="#beranda">Beranda</a>
     <a href="#tentang">Tentang</a>
+    <a href="#visi">Visi Misi</a>
     <a href="#program">Program</a>
     <a href="#akademi">Academy</a>
     <a href="#kontak">Kontak</a>
@@ -127,14 +336,18 @@ footer {
 </header>
 
 <main>
+
 <section class="hero" id="beranda">
   <div class="hero-content">
-    <p>LEMBAGA TRANSFORMASI PENDIDIKAN</p>
+    <div class="eyebrow">LEMBAGA TRANSFORMASI PENDIDIKAN</div>
+
     <h1>Membangun Manusia, Mentransformasi Pendidikan</h1>
+
     <p>
       Mengembangkan kapasitas manusia, memperkuat kelembagaan,
       dan menghadirkan inovasi untuk masa depan pendidikan Indonesia.
     </p>
+
     <a href="#tentang" class="btn">Jelajahi PRAGIA</a>
   </div>
 </section>
@@ -144,6 +357,7 @@ footer {
     <h2>Tentang PRAGIA</h2>
     <p>Membangun perubahan melalui pendidikan.</p>
   </div>
+
   <div class="about-content">
     <p>
       PRAGIA merupakan lembaga transformasi pendidikan yang
@@ -151,59 +365,168 @@ footer {
       melalui pengembangan sumber daya manusia, penguatan
       manajemen kelembagaan, dan inovasi sistem pendidikan.
     </p>
+
+    <br>
+
+    <p>
+      PRAGIA hadir sebagai mitra strategis bagi sekolah,
+      yayasan, pendidik, dan pemangku kepentingan pendidikan
+      dalam membangun ekosistem pendidikan yang adaptif,
+      berkualitas, dan berkelanjutan.
+    </p>
+  </div>
+</section>
+
+<section id="visi">
+  <div class="section-title">
+    <h2>Visi dan Misi</h2>
+    <p>Arah dan komitmen transformasi PRAGIA.</p>
+  </div>
+
+  <div class="vision-grid">
+    <div class="vision-card">
+      <h3>Visi</h3>
+      <p>
+        Menjadi pusat transformasi pendidikan Indonesia
+        yang berkontribusi dalam membangun manusia unggul,
+        memperkuat kelembagaan, dan menciptakan ekosistem
+        pendidikan berkualitas.
+      </p>
+    </div>
+
+    <div class="vision-card">
+      <h3>Misi</h3>
+      <p>
+        Mengembangkan kapasitas pendidik dan tenaga
+        kependidikan, memperkuat tata kelola lembaga,
+        serta menghadirkan inovasi dan pendampingan
+        pendidikan yang berdampak dan berkelanjutan.
+      </p>
+    </div>
   </div>
 </section>
 
 <section id="program">
   <div class="section-title">
-    <h2>Pilar Transformasi</h2>
-    <p>Tiga pilar penggerak perubahan pendidikan.</p>
+    <h2>Tiga Pilar Transformasi</h2>
+    <p>Tiga pilar utama penggerak perubahan pendidikan.</p>
   </div>
+
   <div class="cards">
+
     <div class="card">
       <div class="number">01</div>
       <h3>TPP</h3>
-      <p>Pengembangan transformasi dan peningkatan kapasitas pendidik.</p>
+      <p>
+        Transformasi Pendidik dan Pembelajaran.
+        Pengembangan kapasitas pendidik, peningkatan
+        kompetensi, dan inovasi praktik pembelajaran.
+      </p>
     </div>
+
     <div class="card">
       <div class="number">02</div>
       <h3>MKD</h3>
-      <p>Penguatan manajemen dan kelembagaan pendidikan.</p>
+      <p>
+        Manajemen dan Kelembagaan Pendidikan.
+        Penguatan tata kelola, kepemimpinan, sistem
+        organisasi, dan manajemen lembaga pendidikan.
+      </p>
     </div>
+
     <div class="card">
       <div class="number">03</div>
       <h3>KSI</h3>
-      <p>Pengembangan sistem, inovasi, dan keberlanjutan pendidikan.</p>
+      <p>
+        Kajian, Sistem, dan Inovasi.
+        Pengembangan gagasan, riset, inovasi,
+        serta sistem pendidikan yang adaptif.
+      </p>
     </div>
+
   </div>
 </section>
 
-<section class="about" id="akademi">
+<section class="advantages">
+  <div class="section-title">
+    <h2>Mengapa PRAGIA?</h2>
+    <p>Berorientasi pada perubahan nyata dan berkelanjutan.</p>
+  </div>
+
+  <div class="advantage-grid">
+
+    <div class="advantage">
+      <h3>Berbasis Kebutuhan</h3>
+      <p>
+        Setiap program dirancang berdasarkan kebutuhan
+        dan tantangan nyata lembaga pendidikan.
+      </p>
+    </div>
+
+    <div class="advantage">
+      <h3>Pendampingan Strategis</h3>
+      <p>
+        Tidak hanya memberikan pelatihan,
+        tetapi juga mendampingi proses perubahan.
+      </p>
+    </div>
+
+    <div class="advantage">
+      <h3>Berorientasi Dampak</h3>
+      <p>
+        Mendorong perubahan yang terukur,
+        sistematis, dan berkelanjutan.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="akademi">
   <div class="section-title">
     <h2>PRAGIA Academy</h2>
     <p>Pusat pengembangan kapasitas dan profesionalisme pendidikan.</p>
   </div>
-  <div class="about-content">
+
+  <div class="academy-content">
+    <h3>Membangun Pendidik, Mengembangkan Masa Depan</h3>
+
     <p>
-      Menghadirkan pelatihan, pendampingan, konsultasi,
-      dan pengembangan kompetensi bagi tenaga pendidik,
-      tenaga kependidikan, serta pengelola lembaga pendidikan.
+      PRAGIA Academy merupakan unit pengembangan kapasitas
+      yang menghadirkan pelatihan, pendampingan, konsultasi,
+      dan pengembangan kompetensi bagi pendidik, tenaga
+      kependidikan, serta pengelola lembaga pendidikan.
     </p>
+
+    <div class="academy-list">
+      <span>Pelatihan Pendidikan</span>
+      <span>Workshop dan Seminar</span>
+      <span>Pendampingan Sekolah</span>
+      <span>Konsultasi Pendidikan</span>
+      <span>Pengembangan Kompetensi</span>
+    </div>
   </div>
 </section>
 
 <section class="cta" id="kontak">
   <h2>Mari Berkolaborasi</h2>
-  <p>Bersama membangun ekosistem pendidikan Indonesia yang lebih berkualitas.</p>
-  <br>
-  <a href="mailto:info@pragia.id" class="btn">Hubungi PRAGIA</a>
+
+  <p>
+    Bersama membangun ekosistem pendidikan Indonesia
+    yang lebih berkualitas dan berdaya saing.
+  </p>
+
+  <a href="mailto:info@pragia.id" class="btn">
+    Hubungi PRAGIA
+  </a>
 </section>
+
 </main>
 
 <footer>
   <strong>PRAGIA</strong>
   <p>Pusat Transformasi Pendidikan Indonesia</p>
-  <p>&copy; 2026 PRAGIA. All Rights Reserved.</p>
+  <p>© 2026 PRAGIA. All Rights Reserved.</p>
 </footer>
 
 </body>
