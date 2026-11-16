@@ -30,8 +30,18 @@ header {
   box-shadow:0 2px 12px #00000012;
   z-index:10;
 }
-.logo {color:var(--green);font-size:28px;font-weight:800}
-.logo small {display:block;font-size:9px;letter-spacing:2px}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 230px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
 nav {display:flex;gap:24px}
 nav a {text-decoration:none;color:var(--dark);font-size:14px}
 .hero {
@@ -84,6 +94,11 @@ footer {
   font-size:13px;
 }
 @media(max-width:700px) {
+  .brand img {
+    width: 190px;
+  }
+}
+  @media(max-width:700px) {
   header {flex-direction:column;gap:12px}
   nav {gap:12px;flex-wrap:wrap;justify-content:center}
   .hero {padding:75px 7%}
@@ -95,10 +110,9 @@ footer {
 <body>
 
 <header>
-  <div class="logo">
-    PRAGIA
-    <small>PUSAT TRANSFORMASI PENDIDIKAN INDONESIA</small>
-  </div>
+  <a href="#beranda" class="brand">
+  <img src="logo-pragia.png.png" alt="Logo PRAGIA">
+</a>
   <nav>
     <a href="#beranda">Beranda</a>
     <a href="#tentang">Tentang</a>
