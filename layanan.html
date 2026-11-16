@@ -4,315 +4,352 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Layanan PRAGIA - Pusat Transformasi Pendidikan Indonesia. Konsultasi, pelatihan, dan pendampingan transformasi pendidikan.">
-
+<meta name="description" content="Layanan PRAGIA - Konsultasi strategis, pelatihan, pendampingan, dan transformasi kelembagaan pendidikan Indonesia.">
 <title>Layanan PRAGIA | Pusat Transformasi Pendidikan Indonesia</title>
 
-}
-
-@media(max-width:900px) {
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .target-grid,
-    .process-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media(max-width:700px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav {
-        justify-content: center;
-        gap: 12px;
-    }
-
-    nav a {
-        font-size: 12px;
-    }
-
-    .service-grid,
-    .target-grid,
-    .process-grid {
-        grid-template-columns: 1fr;
-    }
-
-    section {
-        padding: 55px 7%;
-    }
-
-    .hero {
-        padding: 65px 7%;
-    }
-}
-
 <style>
-/* CSS LAMA WEBSITE */
-
-/* LAYANAN PRAGIA */
-.service-section {
-  padding: 80px 8%;
-  background: #f5f8f5;
+:root {
+  --green: #075c3b;
+  --deep: #063d2b;
+  --gold: #d9a441;
+  --light: #f4f8f5;
+  --dark: #173328;
+  --white: #ffffff;
 }
 
-/* KODE CSS LAINNYA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Letakkan sebelum penutup ini */
-</style>
-</head>
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  color: var(--dark);
+  line-height: 1.7;
+  background: white;
+}
+
+/* HEADER */
+header {
+  background: white;
+  padding: 12px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px #00000010;
+}
+
+.logo img {
+  width: 165px;
+  height: 95px;
+  object-fit: contain;
+  display: block;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 14px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--green);
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(120deg, var(--deep), #08754b);
+  color: white;
+  padding: 95px 8%;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: auto;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.hero p {
+  color: #e0eee5;
+  font-size: 17px;
+  max-width: 750px;
+  margin: auto;
+}
+
+/* GENERAL SECTION */
+section {
+  padding: 80px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+  color: var(--green);
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  color: #718078;
+}
+
+/* SERVICES */
+.service-section {
+  background: var(--light);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid #e0e9e2;
+  transition: .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px #00000012;
+}
+
+.service-number {
+  color: var(--gold);
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  color: var(--green);
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: #65736b;
+  font-size: 15px;
+}
+
+/* METHOD */
+.method-section {
+  background: white;
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.method-card {
+  background: var(--light);
+  padding: 25px 20px;
+  border-radius: 10px;
+  border-bottom: 4px solid var(--gold);
+}
+
+.method-card h3 {
+  color: var(--green);
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.method-card p {
+  color: #65736b;
+  font-size: 14px;
+}
+
+/* CTA */
+.service-cta {
+  padding: 70px 8%;
+  background: var(--green);
+  color: white;
+  text-align: center;
+}
+
+.service-cta h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.service-cta p {
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--dark);
+  padding: 13px 28px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #edbd5e;
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+  background: #092c20;
+  color: white;
+  padding: 35px 8%;
+  text-align: center;
+  font-size: 13px;
+}
+
+footer strong {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .method-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 5%;
+  }
+
+  .logo img {
+    width: 140px;
+    height: 75px;
+  }
+
+  nav {
+    gap: 13px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 70px 7%;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  section {
+    padding: 55px 7%;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+  .service-grid,
+  .method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-cta h2 {
+    font-size: 26px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <a href="index.html" class="logo">
-        <img src="logo-pragia.png.png" alt="Logo PRAGIA">
-    </a>
+  <a href="index.html" class="logo">
+    <img src="logo-pragia.png.png" alt="Logo PRAGIA">
+  </a>
 
-    <nav>
-        <a href="index.html">Beranda</a>
-        <a href="tentang.html">Tentang</a>
-        <a href="index.html#visi-misi">Visi Misi</a>
-        <a href="program.html">Program</a>
-        <a href="academy.html">Academy</a>
-        <a href="layanan.html">Layanan</a>
-        <a href="index.html#kontak">Kontak</a>
-    </nav>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="index.html#visi-misi">Visi Misi</a>
+    <a href="program.html">Program</a>
+    <a href="academy.html">Academy</a>
+    <a href="layanan.html" class="active">Layanan</a>
+    <a href="index.html#kontak">Kontak</a>
+  </nav>
 </header>
 
 <main>
 
+<!-- HERO -->
 <section class="hero">
-    <p class="label">LAYANAN PRAGIA</p>
+  <div class="hero-content">
+    <div class="eyebrow">LAYANAN PRAGIA</div>
 
-    <h1>Solusi Transformasi<br>Pendidikan Indonesia</h1>
-
-    <p>
-        PRAGIA menghadirkan konsultasi strategis, pelatihan,
-        pendampingan, dan penguatan kelembagaan untuk mendorong
-        perubahan nyata dalam ekosistem pendidikan.
-    </p>
-</section>
-
-<section class="services">
-
-    <div class="section-title">
-        <h2>Bidang Layanan</h2>
-        <p>
-            Layanan terintegrasi yang dirancang untuk menjawab
-            kebutuhan transformasi satuan pendidikan.
-        </p>
-    </div>
-
-    <div class="service-grid">
-
-        <div class="service-card">
-            <div class="service-number">01</div>
-            <h3>Konsultasi Strategis Pendidikan</h3>
-            <p>
-                Membantu lembaga pendidikan merumuskan arah
-                pengembangan dan kebijakan strategis.
-            </p>
-            <ul>
-                <li>Analisis kondisi lembaga</li>
-                <li>Perencanaan strategis</li>
-                <li>Perumusan program prioritas</li>
-            </ul>
-        </div>
-
-        <div class="service-card">
-            <div class="service-number">02</div>
-            <h3>Pelatihan dan Pengembangan SDM</h3>
-            <p>
-                Meningkatkan kapasitas profesional pendidik
-                dan tenaga kependidikan.
-            </p>
-            <ul>
-                <li>Pelatihan guru</li>
-                <li>Pengembangan kompetensi kepala sekolah</li>
-                <li>Penguatan budaya belajar</li>
-            </ul>
-        </div>
-
-        <div class="service-card">
-            <div class="service-number">03</div>
-            <h3>Pendampingan Transformasi Sekolah</h3>
-            <p>
-                Mendampingi sekolah dalam melaksanakan
-                perubahan secara sistematis dan berkelanjutan.
-            </p>
-            <ul>
-                <li>Pemetaan kebutuhan sekolah</li>
-                <li>Implementasi program perubahan</li>
-                <li>Monitoring dan evaluasi</li>
-            </ul>
-        </div>
-
-        <div class="service-card">
-            <div class="service-number">04</div>
-            <h3>Penguatan Manajemen Kelembagaan</h3>
-            <p>
-                Membangun tata kelola pendidikan yang
-                efektif, adaptif, dan akuntabel.
-            </p>
-            <ul>
-                <li>Pengembangan sistem manajemen</li>
-                <li>Penguatan tata kelola</li>
-                <li>Pengembangan SOP kelembagaan</li>
-            </ul>
-        </div>
-
-        <div class="service-card">
-            <div class="service-number">05</div>
-            <h3>Inovasi dan Digitalisasi Pendidikan</h3>
-            <p>
-                Mengembangkan sistem dan inovasi untuk
-                mendukung efektivitas layanan pendidikan.
-            </p>
-            <ul>
-                <li>Pengembangan sistem digital</li>
-                <li>Transformasi layanan pendidikan</li>
-                <li>Penguatan literasi digital</li>
-            </ul>
-        </div>
-
-        <div class="service-card">
-            <div class="service-number">06</div>
-            <h3>Kemitraan dan Kolaborasi</h3>
-            <p>
-                Membangun sinergi antara sekolah, pemerintah,
-                komunitas, dan berbagai pemangku kepentingan.
-            </p>
-            <ul>
-                <li>Program kolaborasi pendidikan</li>
-                <li>Pengembangan jejaring</li>
-                <li>Inisiatif perubahan sosial</li>
-            </ul>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="target">
-
-    <div class="section-title">
-        <h2>Mitra dan Sasaran Layanan</h2>
-        <p>
-            PRAGIA membuka ruang kolaborasi untuk berbagai
-            institusi yang berkomitmen pada peningkatan mutu pendidikan.
-        </p>
-    </div>
-
-    <div class="target-grid">
-
-        <div class="target-item">
-            <h3>Sekolah</h3>
-            <p>Satuan pendidikan negeri maupun swasta.</p>
-        </div>
-
-        <div class="target-item">
-            <h3>Yayasan Pendidikan</h3>
-            <p>Lembaga pengelola dan penyelenggara pendidikan.</p>
-        </div>
-
-        <div class="target-item">
-            <h3>Madrasah & Pesantren</h3>
-            <p>Lembaga pendidikan berbasis keagamaan.</p>
-        </div>
-
-        <div class="target-item">
-            <h3>Institusi & Komunitas</h3>
-            <p>Organisasi yang bergerak dalam pengembangan pendidikan.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="process">
-
-    <div class="section-title">
-        <h2>Alur Kerja Sama</h2>
-        <p>
-            Pendekatan kolaboratif untuk menghasilkan
-            perubahan pendidikan yang terukur.
-        </p>
-    </div>
-
-    <div class="process-grid">
-
-        <div class="process-item">
-            <div class="number">01</div>
-            <h3>Identifikasi</h3>
-            <p>
-                Memetakan kebutuhan dan tantangan lembaga pendidikan.
-            </p>
-        </div>
-
-        <div class="process-item">
-            <div class="number">02</div>
-            <h3>Perencanaan</h3>
-            <p>
-                Menyusun desain program sesuai kebutuhan mitra.
-            </p>
-        </div>
-
-        <div class="process-item">
-            <div class="number">03</div>
-            <h3>Implementasi</h3>
-            <p>
-                Melaksanakan pelatihan, konsultasi, dan pendampingan.
-            </p>
-        </div>
-
-        <div class="process-item">
-            <div class="number">04</div>
-            <h3>Evaluasi</h3>
-            <p>
-                Mengukur hasil, memperkuat capaian,
-                dan memastikan keberlanjutan perubahan.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="cta">
-
-    <h2>Mari Membangun Kolaborasi</h2>
+    <h1>Solusi Transformasi Pendidikan Indonesia</h1>
 
     <p>
-        Bersama PRAGIA, wujudkan transformasi pendidikan
-        yang bermakna dan berkelanjutan.
+      PRAGIA menghadirkan konsultasi strategis, pelatihan,
+      pendampingan, dan penguatan kelembagaan untuk mendorong
+      perubahan nyata dalam ekosistem pendidikan.
     </p>
-
-    <a href="mailto:info@pragia.id" class="btn">
-        Hubungi PRAGIA
-    </a>
-
+  </div>
 </section>
 
-</main>
-
-<footer>
-<!-- EMPAT LAYANAN UTAMA -->
+<!-- SERVICES -->
 <section class="service-section">
 
-  <div class="service-heading">
-    <h2>Layanan Utama PRAGIA</h2>
+  <div class="section-heading">
+    <h2>Bidang Layanan Kami</h2>
     <p>
-      Solusi terintegrasi untuk membangun kapasitas manusia,
-      memperkuat kelembagaan, dan mentransformasi pendidikan.
+      Layanan terintegrasi untuk membangun kapasitas manusia,
+      memperkuat sistem, dan meningkatkan kualitas pendidikan.
     </p>
   </div>
 
@@ -320,11 +357,11 @@
 
     <div class="service-card">
       <div class="service-number">01</div>
-      <h3>Konsultasi Strategis Pendidikan</h3>
+      <h3>Konsultasi Pendidikan</h3>
       <p>
-        Membantu sekolah dan lembaga pendidikan merumuskan
-        arah pengembangan, strategi kelembagaan, serta
-        perencanaan transformasi pendidikan.
+        Konsultasi strategis untuk membantu sekolah merumuskan
+        arah pengembangan, menyelesaikan persoalan, dan
+        meningkatkan mutu pendidikan.
       </p>
     </div>
 
@@ -332,61 +369,127 @@
       <div class="service-number">02</div>
       <h3>Pelatihan dan Pengembangan SDM</h3>
       <p>
-        Mengembangkan kompetensi guru, kepala sekolah,
-        tenaga kependidikan, dan pengelola lembaga
-        melalui pelatihan dan pengembangan profesional.
+        Pengembangan kompetensi guru, kepala sekolah,
+        tenaga kependidikan, dan pengelola lembaga pendidikan
+        melalui pelatihan profesional.
       </p>
     </div>
 
     <div class="service-card">
       <div class="service-number">03</div>
-      <h3>Pendampingan Transformasi Pendidikan</h3>
+      <h3>Pendampingan Sekolah</h3>
       <p>
-        Mendampingi satuan pendidikan dalam menerapkan
-        sembilan modul transformasi PRAGIA secara
-        terstruktur dan berkelanjutan.
+        Pendampingan berkelanjutan untuk membantu sekolah
+        menerapkan perubahan dan meningkatkan kualitas
+        pembelajaran serta budaya organisasi.
       </p>
     </div>
 
     <div class="service-card">
       <div class="service-number">04</div>
-      <h3>Penguatan Manajemen Kelembagaan</h3>
+      <h3>Penguatan Kelembagaan</h3>
       <p>
-        Membangun tata kelola, sistem manajemen,
-        budaya organisasi, dan kapasitas kelembagaan
-        untuk meningkatkan kualitas pendidikan.
+        Pengembangan tata kelola, manajemen organisasi,
+        sistem kerja, kepemimpinan, dan budaya mutu
+        satuan pendidikan.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-number">05</div>
+      <h3>Inovasi dan Digitalisasi Pendidikan</h3>
+      <p>
+        Pengembangan inovasi pembelajaran, literasi digital,
+        pemanfaatan teknologi, dan sistem informasi
+        untuk mendukung kemajuan pendidikan.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-number">06</div>
+      <h3>Riset dan Pengembangan Pendidikan</h3>
+      <p>
+        Kajian, pemetaan kebutuhan, evaluasi program,
+        serta pengembangan model dan strategi
+        peningkatan kualitas pendidikan.
       </p>
     </div>
 
   </div>
 </section>
 
-<!-- PENDEKATAN PRAGIA -->
-<section class="service-method">
-  <h2>Pendekatan Transformasi PRAGIA</h2>
-  <p>
-    PRAGIA mengembangkan pendekatan yang mengintegrasikan
-    konsultasi, pelatihan, implementasi, pendampingan,
-    dan evaluasi untuk menghasilkan perubahan nyata.
-  </p>
+<!-- METHOD -->
+<section class="method-section">
+
+  <div class="section-heading">
+    <h2>Pendekatan Transformasi PRAGIA</h2>
+    <p>
+      Perubahan pendidikan tidak cukup melalui pelatihan sesaat.
+      Dibutuhkan proses yang terencana, terukur, dan berkelanjutan.
+    </p>
+  </div>
+
+  <div class="method-grid">
+
+    <div class="method-card">
+      <h3>01. Identifikasi</h3>
+      <p>
+        Memetakan kondisi, kebutuhan, potensi,
+        dan tantangan lembaga pendidikan.
+      </p>
+    </div>
+
+    <div class="method-card">
+      <h3>02. Perencanaan</h3>
+      <p>
+        Menyusun strategi, program intervensi,
+        dan target perubahan yang terukur.
+      </p>
+    </div>
+
+    <div class="method-card">
+      <h3>03. Implementasi</h3>
+      <p>
+        Melaksanakan pelatihan, konsultasi,
+        dan pendampingan sesuai kebutuhan.
+      </p>
+    </div>
+
+    <div class="method-card">
+      <h3>04. Evaluasi</h3>
+      <p>
+        Mengukur hasil, memperbaiki sistem,
+        dan memastikan keberlanjutan perubahan.
+      </p>
+    </div>
+
+  </div>
 </section>
 
-<!-- AJAKAN KOLABORASI -->
+<!-- CTA -->
 <section class="service-cta">
-  <h2>Mari Bangun Transformasi Pendidikan</h2>
+
+  <h2>Mari Transformasikan Pendidikan Bersama PRAGIA</h2>
+
   <p>
-    Bersama PRAGIA, wujudkan lembaga pendidikan
-    yang lebih berkualitas dan berdaya saing.
+    Setiap lembaga pendidikan memiliki potensi untuk berkembang.
+    Mari membangun perubahan bersama.
   </p>
-  <br>
+
   <a href="mailto:info@pragia.id" class="btn">
-    Konsultasikan Kebutuhan Anda
+    Konsultasi Bersama PRAGIA
   </a>
+
 </section>
 
+</main>
+
+<footer>
   <strong>PRAGIA</strong>
-    <p>Pusat Transformasi Pendidikan Indonesia</p>
-    <p>&copy; 2026 PRAGIA. All Rights Reserved.</p>
+  <p>Pusat Transformasi Pendidikan Indonesia</p>
+  <p>Membangun Manusia, Mentransformasi Pendidikan</p>
+  <br>
+  <p>&copy; 2026 PRAGIA. All Rights Reserved.</p>
 </footer>
 
 </body>
