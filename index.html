@@ -466,6 +466,153 @@ footer p, footer a {
   .btn-outline { margin: 12px 0 0; }
   .academy-panel { padding: 28px; }
 }
+ 
+/* HERO PRAGIA - TWO COLUMN DESIGN */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.hero-content {
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.hero-content p {
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-visual {
+  position: relative;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visual-decoration {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+}
+
+.visual-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 390px;
+  padding: 35px;
+  border-radius: 22px;
+  background: #ffffff;
+  color: #173328;
+  box-shadow: 0 20px 55px rgba(0,0,0,0.2);
+}
+
+.visual-label {
+  color: #b8892f;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.visual-symbol {
+  width: 85px;
+  height: 85px;
+  margin: 28px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #075c3b, #15915c);
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.visual-card h3 {
+  font-size: 23px;
+  color: #075c3b;
+  margin-bottom: 12px;
+}
+
+.visual-card p {
+  color: #63736b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.visual-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e5eee8;
+}
+
+.visual-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.visual-stats strong {
+  color: #08754b;
+  font-size: 23px;
+}
+
+.visual-stats span {
+  color: #63736b;
+  font-size: 11px;
+}
+
+.visual-caption {
+  position: relative;
+  z-index: 1;
+  margin-top: 22px;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.visual-caption span {
+  color: #e0ad42;
+}
+
+@media (max-width: 850px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .hero-visual {
+    padding: 20px 5px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+}
+ 
 </style>
 </head>
 
@@ -497,30 +644,68 @@ footer p, footer a {
 <main>
 
 <!-- BERANDA -->
+
+<!-- BERANDA / HERO -->
 <section class="hero" id="beranda">
-  <div class="container">
+  <div class="container hero-grid">
+
     <div class="hero-content">
-    
-<p class="hero-note">PUSAT TRANSFORMASI PENDIDIKAN INDONESIA</p>
+      <p class="hero-note">PUSAT TRANSFORMASI PENDIDIKAN INDONESIA</p>
 
-<h1>
-    Membangun Sumber Daya Manusia,
-    <br>
-    Menggerakkan Transformasi Pendidikan
-</h1>
+      <p class="eyebrow">Lembaga Transformasi Pendidikan</p>
 
-<p>
-    PRAGIA hadir sebagai mitra strategis bagi sekolah dan
-    lembaga pendidikan dalam mengembangkan kapasitas manusia,
-    memperkuat kelembagaan, serta menghadirkan inovasi
-    pendidikan yang berdampak dan berkelanjutan.
-</p>
+      <h1>
+        Membangun Sumber Daya Manusia,
+        <br>
+        Menggerakkan Transformasi Pendidikan
+      </h1>
 
-<a href="#program" class="btn">Jelajahi Program PRAGIA</a>
+      <p>
+        PRAGIA hadir sebagai mitra strategis bagi sekolah dan
+        lembaga pendidikan dalam mengembangkan kapasitas manusia,
+        memperkuat kelembagaan, serta menghadirkan inovasi
+        pendidikan yang berdampak dan berkelanjutan.
+      </p>
 
-<a href="#tentang" class="btn btn-outline">Kenali PRAGIA</a>
-
+      <div class="hero-actions">
+        <a href="#program" class="btn">Jelajahi Program PRAGIA</a>
+        <a href="#tentang" class="btn btn-outline">Kenali PRAGIA</a>
+      </div>
     </div>
+
+    <div class="hero-visual">
+      <div class="visual-decoration"></div>
+
+      <div class="visual-card">
+        <span class="visual-label">PRAGIA ACADEMY</span>
+        <div class="visual-symbol">P</div>
+        <h3>Transformasi Pendidikan</h3>
+        <p>
+          Membangun manusia unggul, memperkuat institusi,
+          dan menciptakan masa depan pendidikan.
+        </p>
+
+        <div class="visual-stats">
+          <div>
+            <strong>01</strong>
+            <span>SDM Unggul</span>
+          </div>
+          <div>
+            <strong>02</strong>
+            <span>Institusi Kuat</span>
+          </div>
+          <div>
+            <strong>03</strong>
+            <span>Inovasi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="visual-caption">
+        <span>✦</span> Education Transformation Partner
+      </div>
+    </div>
+
   </div>
 </section>
 
