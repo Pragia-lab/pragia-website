@@ -9,6 +9,95 @@
 
 <title>Layanan PRAGIA | Pusat Transformasi Pendidikan Indonesia</title>
 
+/* LAYANAN PRAGIA */
+.service-section {
+  padding: 80px 8%;
+  background: #f5f8f5;
+}
+
+.service-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 45px;
+}
+
+.service-heading h2 {
+  color: #075c3b;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.service-heading p {
+  color: #718078;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid #e0e9e2;
+  transition: .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px #00000012;
+}
+
+.service-number {
+  color: #d9a441;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.service-card h3 {
+  color: #075c3b;
+  margin: 12px 0;
+  font-size: 21px;
+}
+
+.service-card p {
+  color: #65736b;
+}
+
+.service-method {
+  padding: 75px 8%;
+  text-align: center;
+  background: white;
+}
+
+.service-method h2 {
+  color: #075c3b;
+  margin-bottom: 20px;
+}
+
+.service-cta {
+  padding: 65px 8%;
+  background: #075c3b;
+  color: white;
+  text-align: center;
+}
+
+.service-cta h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+@media(max-width:700px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-heading h2 {
+    font-size: 27px;
+  }
+}
+
 <style>
 :root {
     --green: #075c3b;
