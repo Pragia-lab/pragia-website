@@ -521,12 +521,13 @@ footer p, footer a {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 390px;
-  padding: 35px;
-  border-radius: 22px;
+  max-width: 320px;
+  padding: 25px;
+  border-radius: 20px;
   background: #ffffff;
   color: #173328;
-  box-shadow: 0 20px 55px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.16);
+  box-sizing: border-box;
 }
 
 .visual-label {
@@ -537,38 +538,43 @@ footer p, footer a {
 }
 
 .visual-symbol {
-  width: 85px;
-  height: 85px;
-  margin: 28px auto;
+  width: 65px;
+  height: 65px;
+  margin: 18px auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 22px;
+  border-radius: 18px;
   background: linear-gradient(135deg, #075c3b, #15915c);
   color: white;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: bold;
 }
 
 .visual-card h3 {
-  font-size: 23px;
+  font-size: 20px;
   color: #075c3b;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .visual-card p {
   color: #63736b;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .visual-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 25px;
-  padding-top: 20px;
+  gap: 8px;
+  margin-top: 18px;
+  padding-top: 15px;
   border-top: 1px solid #e5eee8;
+}
+
+.visual-stats strong {
+  color: #08754b;
+  font-size: 20px;
 }
 
 .visual-stats div {
@@ -605,9 +611,12 @@ footer p, footer a {
     grid-template-columns: 1fr;
     gap: 25px;
   }
-
-  .hero-visual {
-    padding: 20px 5px;
+ .hero-visual {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   }
 
   .hero-content h1 {
