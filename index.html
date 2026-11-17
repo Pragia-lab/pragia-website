@@ -735,6 +735,109 @@ footer p, footer a {
   }
 }
 
+/* =================================
+   HERO PRAGIA - FINAL ALIGNMENT
+================================= */
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: stretch;
+    gap: 45px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    max-width: 100%;
+}
+
+.hero-note {
+    font-size: 16px !important;
+    margin-bottom: 22px !important;
+}
+
+.hero-content h1 {
+    font-size: clamp(30px, 3vw, 36px) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.8px !important;
+    margin-bottom: 16px !important;
+}
+
+.hero-content p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.hero-actions {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-top: 25px;
+}
+
+.hero-visual {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.visual-card {
+    max-width: 300px;
+    padding: 23px;
+    border-radius: 19px;
+}
+
+.visual-symbol {
+    width: 62px;
+    height: 62px;
+    margin: 16px auto;
+    font-size: 34px;
+}
+
+.visual-card h3 {
+    font-size: 19px;
+}
+
+.visual-stats {
+    margin-top: 15px;
+    padding-top: 14px;
+}
+
+.visual-stats strong {
+    font-size: 19px;
+}
+
+.visual-caption {
+    margin-top: 22px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hero-content {
+        padding: 25px 0 10px;
+    }
+
+    .hero-actions {
+        margin-top: 20px;
+    }
+
+    .hero-visual {
+        padding: 20px 5px;
+    }
+  
 </style>
 </head>
 
